@@ -8,11 +8,7 @@ export default defineConfig(({ mode }) => {
     
     return {
       plugins: [react()],
-      base: isProduction ? '/Calculadora/' : '/',
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
+      base: isProduction ? '/calculadora/' : '/',
       build: {
         outDir: 'dist',
         assetsDir: 'assets',
